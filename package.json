@@ -2,8 +2,9 @@
   "name": "web-creator",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node scripts/build.mjs",
-    "build": "node scripts/build.mjs --production"
+    "dev": "npm run dev",
+    "build": "npm run build"
+    "start": "npm start"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
