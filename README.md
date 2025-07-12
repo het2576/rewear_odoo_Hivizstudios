@@ -71,7 +71,7 @@
 | Deployment   | Vercel (recommended)                        |
 
 ---
-## Demo Video : (link)
+## Demo Video : (https://drive.google.com/file/d/1ICb50d5rCk0oRoIqAitSghIWdIzi_lck/view?usp=sharing)
 
 
 ---
