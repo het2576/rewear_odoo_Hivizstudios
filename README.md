@@ -71,11 +71,13 @@
 | Deployment   | Vercel (recommended)                        |
 
 ---
+## Demo Video :
+(link)
 
 ## 📦 Installation & Local Setup
 
 ```bash
-git clone https://github.com/your-username/rewear.git
+git clone https://github.com/Hitanshparikh/rewear.git
 cd rewear
 npm install
 npm run dev
