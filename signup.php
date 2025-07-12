@@ -1,3 +1,0 @@
-<?php
-// signup code here
-?>
