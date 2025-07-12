@@ -22,9 +22,9 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800">
+      <nav className="sticky top-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -32,10 +32,10 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
               onClick={() => onNavigate(isAuthenticated ? 'dashboard' : 'landing')}
               className="flex items-center space-x-2 cursor-pointer group"
             >
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="text-white font-bold text-sm">R</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-primary to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-primary-foreground font-bold text-sm">R</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
                 ReWear
               </span>
             </div>
@@ -47,8 +47,8 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                   onClick={() => onNavigate('dashboard')}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
                     currentPage === 'dashboard' 
-                      ? 'bg-purple-500/20 text-purple-400' 
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      ? 'bg-primary/20 text-primary' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                 >
                   <Home size={18} />
@@ -58,8 +58,8 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                   onClick={() => onNavigate('browse')}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
                     currentPage === 'browse' 
-                      ? 'bg-purple-500/20 text-purple-400' 
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      ? 'bg-primary/20 text-primary' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                 >
                   <span>Browse Items</span>
@@ -68,8 +68,8 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                   onClick={() => onNavigate('add-item')}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
                     currentPage === 'add-item' 
-                      ? 'bg-purple-500/20 text-purple-400' 
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      ? 'bg-primary/20 text-primary' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                 >
                   <Plus size={18} />
@@ -80,8 +80,8 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                     onClick={() => onNavigate('admin')}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
                       currentPage === 'admin' 
-                        ? 'bg-purple-500/20 text-purple-400' 
-                        : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                        ? 'bg-primary/20 text-primary' 
+                        : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                     }`}
                   >
                     <Settings size={18} />
@@ -97,18 +97,18 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                 <>
                   <div className="hidden sm:flex items-center space-x-3">
                     <div className="text-right">
-                      <p className="text-sm font-medium text-white">{user?.name}</p>
-                      <p className="text-xs text-purple-400">{user?.points} points</p>
+                      <p className="text-sm font-medium text-foreground">{user?.name}</p>
+                      <p className="text-xs text-primary">{user?.points} points</p>
                     </div>
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                      <User size={16} className="text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-primary to-blue-500 rounded-full flex items-center justify-center">
+                      <User size={16} className="text-primary-foreground" />
                     </div>
                   </div>
                   <Button
                     onClick={handleLogout}
                     variant="outline"
                     size="sm"
-                    className="border-slate-700 hover:border-slate-600"
+                    className="border-border hover:border-primary/50"
                   >
                     <LogOut size={16} className="mr-2" />
                     Logout
@@ -120,14 +120,14 @@ export default function Layout({ children, currentPage, onNavigate }: LayoutProp
                     onClick={() => onNavigate('login')}
                     variant="outline"
                     size="sm"
-                    className="border-slate-700 hover:border-slate-600"
+                    className="border-border hover:border-primary/50"
                   >
                     Login
                   </Button>
                   <Button
                     onClick={() => onNavigate('signup')}
                     size="sm"
-                    className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
+                    className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90"
                   >
                     Sign Up
                   </Button>

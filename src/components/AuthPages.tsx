@@ -59,12 +59,12 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center">
-      <Card className="w-full max-w-md bg-slate-800/50 border-slate-700">
+      <Card className="w-full max-w-md bg-card/50 border-border">
         <CardHeader className="text-center space-y-2">
-          <CardTitle className="text-2xl font-bold text-white">
+          <CardTitle className="text-2xl font-bold text-foreground">
             {type === 'login' ? 'Welcome Back' : 'Join ReWear'}
           </CardTitle>
-          <CardDescription className="text-slate-400">
+          <CardDescription className="text-muted-foreground">
             {type === 'login' 
               ? 'Sign in to your account to continue swapping' 
               : 'Create an account to start your sustainable fashion journey'
@@ -76,34 +76,34 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
           <form onSubmit={handleSubmit} className="space-y-4">
             {type === 'signup' && (
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-slate-300">Full Name</Label>
+                <Label htmlFor="name" className="text-foreground">Full Name</Label>
                 <Input
                   id="name"
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   required
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder-slate-500"
+                  className="bg-background/50 border-border text-foreground placeholder-muted-foreground"
                   placeholder="Enter your full name"
                 />
               </div>
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-slate-300">Email</Label>
+              <Label htmlFor="email" className="text-foreground">Email</Label>
               <Input
                 id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
-                className="bg-slate-900/50 border-slate-700 text-white placeholder-slate-500"
+                className="bg-background/50 border-border text-foreground placeholder-muted-foreground"
                 placeholder="Enter your email"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-slate-300">Password</Label>
+              <Label htmlFor="password" className="text-foreground">Password</Label>
               <div className="relative">
                 <Input
                   id="password"
@@ -111,13 +111,13 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
                   value={formData.password}
                   onChange={(e) => handleInputChange('password', e.target.value)}
                   required
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder-slate-500 pr-10"
+                  className="bg-background/50 border-border text-foreground placeholder-muted-foreground pr-10"
                   placeholder="Enter your password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-500 hover:text-slate-300"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
                 >
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
@@ -126,14 +126,14 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
 
             {type === 'signup' && (
               <div className="space-y-2">
-                <Label htmlFor="confirmPassword" className="text-slate-300">Confirm Password</Label>
+                <Label htmlFor="confirmPassword" className="text-foreground">Confirm Password</Label>
                 <Input
                   id="confirmPassword"
                   type="password"
                   value={formData.confirmPassword}
                   onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
                   required
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder-slate-500"
+                  className="bg-background/50 border-border text-foreground placeholder-muted-foreground"
                   placeholder="Confirm your password"
                 />
               </div>
@@ -148,7 +148,7 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white"
+              className="w-full bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-primary-foreground"
             >
               {isLoading ? (
                 <>
@@ -161,13 +161,13 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
             </Button>
           </form>
 
-          <div className="text-center text-sm text-slate-400">
+          <div className="text-center text-sm text-muted-foreground">
             {type === 'login' ? (
               <>
                 Don't have an account?{' '}
                 <button
                   onClick={() => onNavigate('signup')}
-                  className="text-purple-400 hover:text-purple-300 font-medium"
+                  className="text-primary hover:text-primary/80 font-medium"
                 >
                   Sign up
                 </button>
@@ -177,7 +177,7 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
                 Already have an account?{' '}
                 <button
                   onClick={() => onNavigate('login')}
-                  className="text-purple-400 hover:text-purple-300 font-medium"
+                  className="text-primary hover:text-primary/80 font-medium"
                 >
                   Sign in
                 </button>
@@ -186,7 +186,7 @@ export default function AuthPage({ type, onNavigate }: AuthPageProps) {
           </div>
 
           {/* Demo Credentials */}
-          <div className="text-xs text-slate-500 bg-slate-900/50 rounded-lg p-3 space-y-1">
+          <div className="text-xs text-muted-foreground bg-background/50 rounded-lg p-3 space-y-1">
             <p className="font-medium">Demo Credentials:</p>
             <p>User: user@rewear.com / password</p>
             <p>Admin: admin@rewear.com / password</p>

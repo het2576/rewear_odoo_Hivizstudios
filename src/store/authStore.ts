@@ -25,7 +25,7 @@ const mockUsers: User[] = [
   {
     id: '2',
     email: 'user@rewear.com', 
-    name: 'John Doe',
+    name: 'Hivizstudios',
     points: 250,
     role: 'user',
     createdAt: new Date('2024-02-01')

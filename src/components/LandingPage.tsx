@@ -31,13 +31,13 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
       <section className="text-center space-y-8 py-12">
         <div className="space-y-6">
           <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-blue-400 to-blue-300 bg-clip-text text-transparent">
               Sustainable
             </span>
             <br />
-            <span className="text-white">Fashion Exchange</span>
+            <span className="text-foreground">Fashion Exchange</span>
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Transform your wardrobe sustainably. Swap unused clothing, earn points, 
             and discover unique pieces while reducing textile waste.
           </p>
@@ -48,7 +48,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
           <Button
             onClick={() => onNavigate('signup')}
             size="lg"
-            className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-lg px-8 py-6 group"
+            className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-lg px-8 py-6 group"
           >
             Start Swapping
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -57,7 +57,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             onClick={() => onNavigate('browse')}
             variant="outline"
             size="lg"
-            className="border-slate-700 hover:border-slate-600 text-lg px-8 py-6"
+            className="border-border hover:border-primary/50 text-lg px-8 py-6"
           >
             Browse Items
           </Button>
@@ -65,7 +65,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
             onClick={() => onNavigate('add-item')}
             variant="outline"
             size="lg"
-            className="border-slate-700 hover:border-slate-600 text-lg px-8 py-6"
+            className="border-border hover:border-primary/50 text-lg px-8 py-6"
           >
             List an Item
           </Button>
@@ -74,37 +74,37 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
 
       {/* Features Section */}
       <section className="grid md:grid-cols-3 gap-8">
-        <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors group">
+        <Card className="bg-card/50 border-border hover:bg-card/70 transition-colors group">
           <CardContent className="p-6 text-center space-y-4">
             <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
               <Recycle className="text-green-400" size={24} />
             </div>
-            <h3 className="text-xl font-semibold text-white">Eco-Friendly</h3>
-            <p className="text-slate-400">
+            <h3 className="text-xl font-semibold text-foreground">Eco-Friendly</h3>
+            <p className="text-muted-foreground">
               Reduce textile waste by giving your clothes a second life through our sustainable exchange platform.
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors group">
+        <Card className="bg-card/50 border-border hover:bg-card/70 transition-colors group">
           <CardContent className="p-6 text-center space-y-4">
             <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
               <Users className="text-blue-400" size={24} />
             </div>
-            <h3 className="text-xl font-semibold text-white">Community Driven</h3>
-            <p className="text-slate-400">
+            <h3 className="text-xl font-semibold text-foreground">Community Driven</h3>
+            <p className="text-muted-foreground">
               Connect with like-minded fashion enthusiasts and build a sustainable community together.
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors group">
+        <Card className="bg-card/50 border-border hover:bg-card/70 transition-colors group">
           <CardContent className="p-6 text-center space-y-4">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-              <Award className="text-purple-400" size={24} />
+            <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+              <Award className="text-primary" size={24} />
             </div>
-            <h3 className="text-xl font-semibold text-white">Earn Rewards</h3>
-            <p className="text-slate-400">
+            <h3 className="text-xl font-semibold text-foreground">Earn Rewards</h3>
+            <p className="text-muted-foreground">
               Earn points for every item you list and use them to get items you love from other users.
             </p>
           </CardContent>
@@ -114,8 +114,8 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
       {/* Featured Items Carousel */}
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-white">Featured Items</h2>
-          <p className="text-slate-400">Discover amazing pieces from our community</p>
+          <h2 className="text-3xl font-bold text-foreground">Featured Items</h2>
+          <p className="text-muted-foreground">Discover amazing pieces from our community</p>
         </div>
 
         {featuredItems.length > 0 && (
@@ -127,7 +127,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
               >
                 {featuredItems.map((item) => (
                   <div key={item.id} className="w-full flex-shrink-0">
-                    <Card className="bg-slate-800/50 border-slate-700 overflow-hidden">
+                    <Card className="bg-card/50 border-border overflow-hidden">
                       <div className="md:flex">
                         <div className="md:w-1/2">
                           <img
@@ -138,26 +138,26 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                         </div>
                         <div className="md:w-1/2 p-8 flex flex-col justify-center space-y-4">
                           <div className="space-y-2">
-                            <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                            <p className="text-slate-400">{item.description}</p>
+                            <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
+                            <p className="text-muted-foreground">{item.description}</p>
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {item.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm"
+                                className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
                               >
                                 {tag}
                               </span>
                             ))}
                           </div>
                           <div className="flex items-center justify-between">
-                            <span className="text-lg font-semibold text-purple-400">
+                            <span className="text-lg font-semibold text-primary">
                               {item.pointsRequired} points
                             </span>
                             <Button
                               onClick={() => onNavigate('signup')}
-                              className="bg-gradient-to-r from-purple-500 to-blue-500"
+                              className="bg-gradient-to-r from-primary to-blue-500"
                             >
                               View Details
                             </Button>
@@ -177,7 +177,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                   onClick={prevSlide}
                   variant="outline"
                   size="icon"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-slate-900/80 border-slate-700"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 border-border"
                 >
                   <ChevronLeft size={20} />
                 </Button>
@@ -185,7 +185,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                   onClick={nextSlide}
                   variant="outline"
                   size="icon"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-slate-900/80 border-slate-700"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 border-border"
                 >
                   <ChevronRight size={20} />
                 </Button>
@@ -199,7 +199,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-purple-400' : 'bg-slate-600'
+                    currentSlide === index ? 'bg-primary' : 'bg-muted'
                   }`}
                 />
               ))}
