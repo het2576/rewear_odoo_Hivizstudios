@@ -71,8 +71,10 @@
 | Deployment   | Vercel (recommended)                        |
 
 ---
-## Demo Video :
-(link)
+## Demo Video : (link)
+
+
+---
 
 ## 📦 Installation & Local Setup
 
