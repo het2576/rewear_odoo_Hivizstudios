@@ -1,7 +1,6 @@
 # 👕 ReWear – Community Clothing Exchange Platform
 
 🌱 **A sustainable, AI-enhanced platform to swap unused clothing and reduce textile waste.**
-
 ---
 
 ## 🚀 Overview
@@ -71,8 +70,8 @@
 | Deployment   | Vercel (recommended)                        |
 
 ---
-## Demo Video : (https://drive.google.com/file/d/1ICb50d5rCk0oRoIqAitSghIWdIzi_lck/view?usp=sharing)
-
+**Demo Video : (https://drive.google.com/file/d/1ICb50d5rCk0oRoIqAitSghIWdIzi_lck/view?usp=sharing)**
+## live here : (https://rewearx.netlify.app/)
 
 ---
 
